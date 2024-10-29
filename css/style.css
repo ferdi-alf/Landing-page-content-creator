@@ -1,0 +1,275 @@
+/* poppins */
+@import url("https://fonts.googleapis.com");
+@import url("https://fonts.gstatic.com");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Londrina+Outline&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+.fira-sans-condensed {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-style: normal;
+}
+
+.font-outside {
+  font-family: "Londrina Outline", sans-serif;
+  font-style: normal;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: white;
+}
+
+header {
+  padding-top: 4rem;
+}
+
+.icon {
+  border: 2px solid rgb(91, 192, 242);
+}
+
+.img {
+  width: 20%;
+  filter: drop-shadow(0 0 0.75rem skyblue);
+}
+
+.nav {
+  color: #000000;
+}
+
+.active {
+  color: skyblue;
+}
+
+.nav-link.dark\:nav {
+  color: rgb(233, 233, 233);
+}
+
+.img .profile {
+  width: 100%;
+}
+
+.container-avatar {
+  width: 120px;
+}
+
+.bar {
+  font-size: 23px;
+}
+
+.technical-bars .bar:first-child {
+  margin-top: 0;
+}
+
+.technical-bars .bar:last-child {
+  margin-bottom: 0;
+}
+
+.technical-bars .bar .indfo {
+  margin-bottom: 5px;
+  color: white;
+}
+
+.technical-bars .bar .indfo span {
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
+}
+
+.technical-bars .bar .progress-line {
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  height: 5px;
+  background-color: #000;
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.technical-bars .bar .progress-line span {
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+  z-index: -1;
+}
+
+.progress-line.instagram span {
+  width: 80%;
+}
+
+.progress-line.tiktok span {
+  width: 90%;
+}
+
+.progress-line.youtube span {
+  width: 45%;
+}
+
+.progress-line.bootstrap span {
+  width: 30%;
+}
+
+.progress-line span::after {
+  position: absolute;
+  padding: 1px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+  top: -20px;
+  right: -20px;
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
+}
+
+.progress-line.instagram span::after {
+  content: "80%";
+}
+
+.progress-line.tiktok span::after {
+  content: "90%";
+}
+
+.progress-line.youtube span::after {
+  content: "45%";
+}
+
+.progress-line.bootstrap span::after {
+  content: "35%";
+}
+
+.section-bar {
+  width: 50%;
+}
+
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+
+.chart {
+  width: 450px;
+  height: 450px;
+}
+
+@media screen and (max-width: 1080px) {
+  .name {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 965px) {
+  .container-chart {
+    flex-direction: column;
+    row-gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-bar {
+    width: 100%;
+  }
+
+  .pp {
+    justify-content: start;
+  }
+
+  .tik {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .img {
+    width: 30%;
+  }
+
+  .name {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content-header {
+    flex-direction: column-reverse;
+    row-gap: 24px;
+  }
+
+  .img {
+    width: 40%;
+  }
+
+  .tik {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 624px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .fot {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .img {
+    width: 60%;
+  }
+
+  .chart {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .flow {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .img {
+    width: 65%;
+  }
+
+  .name {
+    font-size: 40px;
+  }
+
+  .flow {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .name {
+    font-size: 35px;
+  }
+
+  .flw {
+    font-size: 22px;
+  }
+
+  .txt {
+    font-size: 13px;
+  }
+
+  .th {
+    font-size: 1px;
+  }
+}
